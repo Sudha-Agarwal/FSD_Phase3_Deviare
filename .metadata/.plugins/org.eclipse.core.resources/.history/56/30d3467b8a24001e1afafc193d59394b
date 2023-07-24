@@ -1,0 +1,12 @@
+package withDI;
+
+public class MessagingApp {
+	Messaging emailMessaging;
+	Messaging smsMessaging;
+	
+	public MessagingApp(Messaging emailMessaging, Messaging smsMessaging) {
+		this.emailMessaging = emailMessaging;
+		this.smsMessaging = smsMessaging;		
+	}
+
+}

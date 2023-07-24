@@ -1,0 +1,23 @@
+package springJDBC;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+
+public class EmployeeDAO {
+	private JdbcTemplate jdbcTemplate;
+	Employee employee;
+	
+	@Autowired
+	EmployeeDAO(JdbcTemplate jdbcTemplate){
+		this.jdbcTemplate = jdbcTemplate;
+		//this.employee = employee;
+	}
+	 public void createEmployee(Employee emp) {
+		 String sql = "INSERT INTO Employee(id, name, age) VALUES(?,?,?)";
+		 jdbcTemplate.update(sql, emp.getId(), emp.getName(),emp.getAge()); 
+		 
+	 }	
+
+}
