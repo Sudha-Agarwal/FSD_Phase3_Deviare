@@ -2,6 +2,10 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\SpringJDBC"/>
+			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\SpringTutorial1"/>
+			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\SpringTutorial\src\main\java\withDI"/>
+			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\SpringTutorial\pom.xml"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -13,6 +17,7 @@
 		</list>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
@@ -24,10 +29,14 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.example"/>
+			<item value="com.example.SpringMVC"/>
 		</list>
 		<list key="groupId">
+			<item value="com.example"/>
 		</list>
 		<list key="artifactId">
+			<item value="SpringMVC"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -43,12 +52,10 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="com.learning"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="SpringTutorial"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
