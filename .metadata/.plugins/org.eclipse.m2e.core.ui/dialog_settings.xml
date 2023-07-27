@@ -75,6 +75,8 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\SpringBootDB"/>
+			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\SpringBootTutorial\SpringBootTutorial"/>
 			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\SpringBootTutorial"/>
 		</list>
 		<list key="projectNameTemplate">
