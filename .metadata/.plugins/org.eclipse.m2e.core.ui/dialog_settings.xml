@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\File-Upload-Download"/>
 			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\SpringJDBC"/>
 			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\SpringTutorial1"/>
 			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\SpringTutorial\src\main\java\withDI"/>
@@ -29,14 +30,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.example.SpringMVC"/>
-			<item value="com.example"/>
 		</list>
 		<list key="groupId">
-			<item value="com.example"/>
 		</list>
 		<list key="artifactId">
-			<item value="SpringMVC"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -52,10 +49,12 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.example"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="JunitTutorial"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -75,6 +74,9 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\File-Upload-Download"/>
+			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\ExceptionHandling"/>
+			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\Kafka (1)"/>
 			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\SpringBootDB"/>
 			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\SpringBootTutorial\SpringBootTutorial"/>
 			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\SpringBootTutorial"/>
