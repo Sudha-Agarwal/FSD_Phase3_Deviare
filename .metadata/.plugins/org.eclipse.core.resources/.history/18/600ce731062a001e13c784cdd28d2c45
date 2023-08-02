@@ -1,6 +1,0 @@
-package withoutDI;
-
-public class EmailMessaging implements Messaging{
-	
-
-}

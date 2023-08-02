@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\JunitTutorial\src\test\java\MyTestClass.java"/>
 			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\File-Upload-Download"/>
 			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\SpringJDBC"/>
 			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\SpringTutorial1"/>
@@ -54,6 +55,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="JunitTutorial1"/>
 			<item value="JunitTutorial"/>
 		</list>
 		<list key="projectNameTemplate">
