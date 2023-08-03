@@ -9,10 +9,11 @@ import jakarta.persistence.Id;
 public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
+	private Long id;	
 	private String name;
 	private String category;
+	private double price;
+	
 	public Long getId() {
 		return id;
 	}
@@ -30,6 +31,12 @@ public class Product {
 	}
 	public void setCategory(String category) {
 		this.category = category;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
 	}
 	
 	

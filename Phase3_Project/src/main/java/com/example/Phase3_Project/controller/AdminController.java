@@ -1,8 +1,10 @@
 package com.example.Phase3_Project.controller;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,8 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.Phase3_Project.model.Product;
+import com.example.Phase3_Project.model.PurchaseReport;
 import com.example.Phase3_Project.model.User;
 import com.example.Phase3_Project.services.ProductService;
+import com.example.Phase3_Project.services.PurchaseReportService;
 import com.example.Phase3_Project.services.UserService;
 
 @Controller
@@ -27,6 +31,13 @@ public class AdminController {
 	@Autowired
 	UserService userService;
 	
+	@Autowired
+	PurchaseReportService purchaseReportService;
+	
+	@GetMapping("/dashboard")
+	public String adminDashboard(Model model) {
+		return "admindashboard";
+	}
 	
 	@GetMapping("/manageproducts")
 	public String manageProducts(Model model) {
@@ -76,6 +87,23 @@ public class AdminController {
 		return "redirect:/admin/manageproducts";	
 	}
 	
+	@GetMapping("/managecategories")
+	public String manageCategories(Model model) {
+		List<String> categories = productService.getAllCategories();
+		model.addAttribute("categories",categories);
+		return "managecategories";
+	}
+	
+	@GetMapping("/productsbycategory/{category}")
+	public String showProductsByCategory(@PathVariable("category") String category, Model model) {
+		List<Product> products = productService.getProductsByCategory(category);
+		model.addAttribute("products", products);
+		return "productsbycategory";
+		
+	}
+	
+	
+	
 	@GetMapping("/manageusers")
 	public String showManageUsersPage(Model model) {
 		List<User> users = userService.getAllusers();
@@ -89,5 +117,23 @@ public class AdminController {
 		model.addAttribute("users", users);
 		return "manageusers";
 	}
+	
+	@GetMapping("/purchasereports")
+	public String showPurchaseReportPage() {
+		return "purchasereports";
+	}
+	
+	@PostMapping("/purchasereports")
+	public String filterPurchaseReports(@RequestParam("startDate") @DateTimeFormat(iso=DateTimeFormat.ISO.DATE) Date startDate,
+			@RequestParam("endDate") @DateTimeFormat(iso=DateTimeFormat.ISO.DATE) Date endDate,
+			@RequestParam("category") String category,
+			Model model) {
+		
+		List<PurchaseReport> purchaseReports = purchaseReportService.getPurchaseReportsByDateAndCategory(startDate, endDate, category);
+		model.addAttribute("purchaseReports",purchaseReports);
+		return "purchasereports";
+		
+	}
+			
 
 }
