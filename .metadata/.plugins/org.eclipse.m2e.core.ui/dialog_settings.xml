@@ -76,6 +76,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\FSD4RestAPI"/>
 			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Original\HTTPSpringBoot"/>
 			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\Phase3_Project"/>
 			<item value="C:\All_Works\SimpliLearn\FSD_Phase3_Deviare\File-Upload-Download"/>

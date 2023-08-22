@@ -21,15 +21,22 @@ public class UserController {
     private UserService userService; // Assuming you have a UserService to handle user operations
 
     @PostMapping("/createUser")
-    public ResponseEntity<String> createUser(@RequestBody AppUser  userDTO) {
+    public ResponseEntity<Map<String, String>> createUser(@RequestBody AppUser  userDTO) {
         try {
-
 
             userService.createUser(userDTO); // Assuming createUser method in your service
 
-            return ResponseEntity.ok("User created successfully");
+            Map<String, String> response = new HashMap<>();
+            response.put("status", "success");
+            response.put("message", "User created successfully");  
+            return ResponseEntity.status(HttpStatus.OK).body(response);
+           
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error creating user");
+        	Map<String, String> response = new HashMap<>();
+            response.put("status", "error");
+            response.put("message", "Error during login");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
+            //return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error creating user");
         }
     }
     
@@ -41,7 +48,7 @@ public class UserController {
             if (foundUser != null && foundUser.getPassword().equals(user.getPassword())) {
             	 Map<String, String> response = new HashMap<>();
                  response.put("status", "success");
-                 response.put("message", "Login successful");                
+                 response.put("message", "Login successful");  
                  return ResponseEntity.status(HttpStatus.OK).body(response);
             } else {
             	 Map<String, String> response = new HashMap<>();
